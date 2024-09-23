@@ -129,11 +129,11 @@ pip install --editable .
 
 ## Adjust `config` file
 
-A [configuration file](link)  is prepared specifically for this hacking session, 
+A [configuration file](https://data.4tu.nl/private_datasets/SpL0x8-4l1H8aWGSYghsiTRhvJmPP71MaL7DQmcZOCM)  is prepared specifically for this hacking session, 
 to minimize the time spent on configuration and maximize the hacking part. 
 Here are a few steps to follow to get the configuration ready:
 
-- [Download `dcc-djehuty.xml` file](link) and place it in the root of the `djehuty-24.8` folder.
+- [Download `dcc-djehuty.xml` file](https://data.4tu.nl/private_datasets/SpL0x8-4l1H8aWGSYghsiTRhvJmPP71MaL7DQmcZOCM) and place it in the root of the `djehuty-24.8` folder.
 
 - Create folder `djehuty-storage/cache` in the root of `djehuty-24.8` directory:
 
