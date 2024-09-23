@@ -1,0 +1,212 @@
+---
+title: "`djehuty`-DCC Hackathon"
+subtitle: "Installation guidelines"
+format: 
+  html:
+    theme: cosmo
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    code-copy: true
+---
+
+## Welcome! 
+On Thursday, 26th September 2024, DCC together with 4TU.ResearchData are organising a hacking session to explore the `djehuty` code base. [`djehuty`](https://github.com/4TUResearchData/djehuty) is a data repository system developed by and for 4TU.ResearchData.
+
+## Get `djehuty` source code
+
+Get the latest release of `djehuty` from [Github Releases](https://github.com/4TUResearchData/djehuty/releases) page and pack it to a desired directory.
+
+Alternatively, you can download tarball directly from command-line: 
+
+```{r}
+#| eval: false
+
+curl -LO https://github.com/4TUResearchData/djehuty/archive/refs/tags/v24.8.tar.gz
+```
+
+and unpack it using: 
+
+```{default}
+tar zxvf v24.8.tar.gz
+```
+
+You should now be able to access the source code in the `djehuty-24.8` folder.
+
+```{default}
+cd djehuty-24.8
+```
+
+
+## Prerequisites
+The `djehuty` program needs Python (version 3.8 or higher) and Git to be installed. 
+Additionally, a couple of Python packages need to be installed. If you don't have 
+those installed, please refer to Software Carpentry installation instructions for [Git](https://carpentries.github.io/workshop-template/install_instructions/#git) and [Python](https://carpentries.github.io/workshop-template/install_instructions/#python-1).
+
+
+## Install dependencies
+Use the following code to install Python packages in the virtual environment
+`djehuty-env`.
+
+::: {.panel-tabset}
+
+## Windows
+
+```{default}
+
+python -m venv djehuty-env 
+. djehuty-env/Scripts/activate 
+pip install -r requirements.txt
+
+```
+
+## Linux
+
+```{default}
+
+python -m venv djehuty-env 
+. djehuty-env/bin/activate 
+pip install -r requirements.txt
+
+```
+
+## MacOS
+
+```{default}
+
+python -m venv djehuty-env 
+. djehuty-env/bin/activate 
+pip install -r requirements.txt
+
+```
+
+
+:::
+
+
+## Get interactive development
+To get an interactive development environment, use:
+
+::: {.panel-tabset}
+
+## Windows
+
+```{default}
+cp pyproject.toml.in  pyproject.toml
+```
+
+Then, open the `pyproject.toml` file, and change version from `@VERSION@` to `0.0.1`.
+
+
+Finally, run:
+```{default}
+pip install --editable .
+
+```
+
+
+
+## Linux
+
+```{default}
+
+sed -e 's/@VERSION@/0.0.1/g' pyproject.toml.in > pyproject.toml
+pip install --editable .
+
+```
+
+## MacOS
+
+```{default}
+
+sed -e 's/@VERSION@/0.0.1/g' pyproject.toml.in > pyproject.toml
+pip install --editable .
+```
+
+
+:::
+
+
+
+## Adjust `config` file
+
+A [configuration file](link)  is prepared specifically for this hacking session, 
+to minimize the time spent on configuration and maximize the hacking part. 
+Here are a few steps to follow to get the configuration ready:
+
+- [Download `dcc-djehuty.xml` file](link) and place it in the root of the `djehuty-24.8` folder.
+
+- Create folder `djehuty-storage/cache` in the root of `djehuty-24.8` directory:
+
+```{default}
+mkdir -p djehuty-storage/cache/
+```
+
+
+<!-- - Change path in `storage-root` configuration to point to your `djehuty-storage` folder: -->
+
+
+<!-- ```{default} -->
+<!-- <storage-root>/path/to/your/djehuty-storage/</storage-root> -->
+<!-- ``` -->
+
+<!-- - Change path in `cache-root` configuration to point to your `djehuty-storage/cache` folder: -->
+
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- <cache-root clear-on-start="1">/path/to/your/djehuty-storage/cache/</cache-root> -->
+<!-- ``` -->
+
+<!-- - Set your email address associated with the ORCID number for automatic login -->
+
+<!-- ```{default} -->
+<!-- <automatic-login-email>you@example.com</automatic-login-email> -->
+<!-- ``` -->
+
+<!-- - Set your email address and associated with it ORCID number to set use privileges -->
+
+<!-- ```{default} -->
+<!-- <account email="you@example.com" orcid="0000-0000-0000-0001"> -->
+<!-- ``` -->
+
+- Add a unique state graph name, e.g. your name and the day of the month you were born on:
+
+```{default}
+<state-graph>name-dd</state-graph> 
+```
+
+
+## Initilize djehuty
+
+Upon first run, `djehuty` needs to initialize the database with categories, licences and accounts. To do so, pass the `--initialize` option to the `djehuty web` command:
+
+
+```{default}
+djehuty web --initialize --config dcc-djehuty.xml
+
+```
+
+Then, open [http://127.0.0.1:8080](http://127.0.0.1:8080) in a browser to view the web interface.
+
+
+## Run Djehuty 
+After once initialized, `djehuty web` can be run with the following command:
+
+```{default}
+djehuty web --config-file=dcc-djehuty.xml
+```
+
+Then, open [http://127.0.0.1:8080](http://127.0.0.1:8080) in a browser to view the web interface.
+
+
+## Connect to the database
+Djehuty needs a SPARQL 1.1 endpoint such as
+[Virtuoso OSE](https://github.com/openlink/virtuoso-opensource) or
+[Jena Fuseki](https://jena.apache.org/documentation/fuseki2/) to
+store its state.
+
+For the hackathon, we have prepared a dedicated [Virtuoso endpoint](https://sparql-lab.data.4tu.nl/sparql).
+
+
+
+
