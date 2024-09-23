@@ -1,0 +1,71 @@
+---
+title: "4TU.ResearchData Hackathon"
+subtitle: "Challanges"
+format: 
+  html:
+    theme: cosmo
+    self-contained: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+    code-copy: true
+    toc: true
+    toc-depth: 2
+    other-links:
+      - text: Djehuty Documentation
+        icon: document
+        href: https://djehuty.4tu.nl/
+    code-links:
+      - text: GitHub Repo
+        icon: github
+        href: https://github.com/4TUResearchData/djehuty/
+---
+
+## Challenge 1 - API Documentation
+
+This one is our work in progress. Contribute to the [`djehuty` documentation](https://djehuty.4tu.nl/) by adding info about the (v2) API. 
+
+In this challenge you will expand [Section 5](https://djehuty.4tu.nl/#x1-430005) of the documentation. This section already provides information about some of the endpoints, but it is still under construction. 
+
+:::{.callout-note title="Where to start?"}
+In the `djehuty-24.8` folder, find file 
+
+```{default}
+src/djehuty/web/wsgi.py
+
+```
+
+In the file, you can find a procedure `url_map` belonging to the class `ApiServer`. This procedure serves as a dictionary between URIs and procedures. Look for sections `V2 API`.  Confront this section with the [documentation](https://djehuty.4tu.nl/#x1-430005) and add sections that are missing, following the documentation convention.
+
+To change the documentation files, go to 
+
+```{default}
+doc/api.tex
+```
+:::
+
+
+
+## Challenge 2 - GitHub/Gitlab Release integration
+
+This one might sound familiar! The challenge is based on an [issue](https://github.com/4TUResearchData/djehuty/issues/20) raised after last meeting between the DCC and 4TU.ResearchData technical team.
+
+Work on an automated workflow to connect code hosting platform (GitHub/GitLab/BitBucket/Savannah/Forgejo) releases with 4TU.ResearchData.   
+
+
+:::{.callout-note title="Where to start?"}
+
+foo
+
+:::
+
+
+## Challenge 3 - (Advanced) Git big repo results in big memory consumption
+
+This one was *bugging* us for a while. 
+
+
+:::{.callout-note title="Where to start?"}
+
+foo
+
+:::
