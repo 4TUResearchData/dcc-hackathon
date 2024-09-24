@@ -1,12 +1,23 @@
 ---
-title: "`djehuty`-DCC Hackathon"
+title: "4TU.ResearchData Hackathon"
 subtitle: "Installation guidelines"
 format: 
   html:
     theme: cosmo
+    self-contained: true
     code-block-bg: true
     code-block-border-left: "#31BAE9"
     code-copy: true
+    toc: true
+    toc-depth: 2
+    other-links:
+      - text: Djehuty Documentation
+        icon: document
+        href: https://djehuty.4tu.nl/
+    code-links:
+      - text: GitHub Repo
+        icon: github
+        href: https://github.com/4TUResearchData/djehuty/
 ---
 
 ## Welcome! 
@@ -205,7 +216,6 @@ Djehuty needs a SPARQL 1.1 endpoint such as
 [Jena Fuseki](https://jena.apache.org/documentation/fuseki2/) to
 store its state.
 
-For the hackathon, we have prepared a dedicated [Virtuoso endpoint](https://sparql-lab.data.4tu.nl/sparql).
 
 
 

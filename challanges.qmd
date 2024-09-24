@@ -38,7 +38,8 @@ In the file, you can find a procedure `url_map` belonging to the class `ApiServe
 
 To change the documentation files, go to 
 
-```{default}
+```{r}
+#| eval: false
 doc/api.tex
 ```
 :::
