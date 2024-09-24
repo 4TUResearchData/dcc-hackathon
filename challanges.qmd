@@ -22,7 +22,9 @@ format:
 
 ## Challenge 1 - API Documentation
 
-This one is our work in progress. Contribute to the [`djehuty` documentation](https://djehuty.4tu.nl/) by adding info about the (v2) API. 
+This one is our work in progress.
+
+Contribute to the [`djehuty` documentation](https://djehuty.4tu.nl/) by adding info about the (v2) API. 
 
 In this challenge you will expand [Section 5](https://djehuty.4tu.nl/#x1-430005) of the documentation. This section already provides information about some of the endpoints, but it is still under construction. 
 
@@ -45,17 +47,55 @@ doc/api.tex
 :::
 
 
+## Challenge 2 - Propose new stats visualisation
+
+This one is for those who feel creative!
+
+Propose visualizations for datasets statistics presented on the landing page. 
+You can also use other statistics than those displayed now. 
+
+And a bonus question: 
+*Which statistics would you like to have available via `djehuty` API call?*  
+
+:::{.callout-note title="Where to start?"}
+
+Start by creating the dummy data. Upload some files and publish them.
+
+Then explore how the present statistics is created in:
+
+```{default} 
+src/djehuty/web/resources/html_templates/portal.html
+```
+
+Look how the data is retrieved  using the procedure: 
+`repository_statistics` in the `djehuty/src/djehuty/web/database.py`. 
+Inspect the SPARQL templates used and adapt the queries to get the statistics you need. 
+
+Once you have the data, start visualising!
+
+:::
+
 
 ## Challenge 2 - GitHub/Gitlab Release integration
 
-This one might sound familiar! The challenge is based on an [issue](https://github.com/4TUResearchData/djehuty/issues/20) raised after last meeting between the DCC and 4TU.ResearchData technical team.
+This one might sound familiar! 
+
+
+The challenge is based on an [issue](https://github.com/4TUResearchData/djehuty/issues/20) raised after last meeting between the DCC and 4TU.ResearchData technical team.
 
 Work on an automated workflow to connect code hosting platform (GitHub/GitLab/BitBucket/Savannah/Forgejo) releases with 4TU.ResearchData.   
 
 
 :::{.callout-note title="Where to start?"}
 
-foo
+There is already some good discussion in the [issue](https://github.com/4TUResearchData/djehuty/issues/20), 
+so that can be a starting point. 
+
+Explore the GitHub documentation and find out how webhooks can be used to achieve our goal. 
+
+
+<!-- - What does Github communicate to 4TU with a webhook? -->
+<!-- - Is that sufficient information for the integration? -->
 
 :::
 
@@ -65,8 +105,16 @@ foo
 This one was *bugging* us for a while. 
 
 
+When you git clone (relatively) big files from 4TU.ResearchData, 
+`djehuty` process memory usage exceeds 4GB which can cause a system crash.
+
+You can help us solve this puzzle. 
+
+
 :::{.callout-note title="Where to start?"}
 
-foo
+The process that is causing the issue is probably `subprocess.run` in 
+`__git_passthrough` procedure. 
+You will find it in `src/djehuty/web/wsgi.py`.
 
 :::

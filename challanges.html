@@ -3085,6 +3085,7 @@ vertical-align: -.125em;
    
   <ul class="collapse">
   <li><a href="#challenge-1---api-documentation" id="toc-challenge-1---api-documentation" class="nav-link active" data-scroll-target="#challenge-1---api-documentation">Challenge 1 - API Documentation</a></li>
+  <li><a href="#challenge-2---propose-new-stats-visualisation" id="toc-challenge-2---propose-new-stats-visualisation" class="nav-link" data-scroll-target="#challenge-2---propose-new-stats-visualisation">Challenge 2 - Propose new stats visualisation</a></li>
   <li><a href="#challenge-2---githubgitlab-release-integration" id="toc-challenge-2---githubgitlab-release-integration" class="nav-link" data-scroll-target="#challenge-2---githubgitlab-release-integration">Challenge 2 - GitHub/Gitlab Release integration</a></li>
   <li><a href="#challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" id="toc-challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" class="nav-link" data-scroll-target="#challenge-3---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 3 - (Advanced) Git big repo results in big memory consumption</a></li>
   </ul>
@@ -3114,7 +3115,8 @@ vertical-align: -.125em;
 
 <section id="challenge-1---api-documentation" class="level2">
 <h2 class="anchored" data-anchor-id="challenge-1---api-documentation">Challenge 1 - API Documentation</h2>
-<p>This one is our work in progress. Contribute to the <a href="https://djehuty.4tu.nl/"><code>djehuty</code> documentation</a> by adding info about the (v2) API.</p>
+<p>This one is our work in progress.</p>
+<p>Contribute to the <a href="https://djehuty.4tu.nl/"><code>djehuty</code> documentation</a> by adding info about the (v2) API.</p>
 <p>In this challenge you will expand <a href="https://djehuty.4tu.nl/#x1-430005">Section 5</a> of the documentation. This section already provides information about some of the endpoints, but it is still under construction.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Where to start?">
 <div class="callout-header d-flex align-content-center">
@@ -3138,9 +3140,35 @@ Where to start?
 </div>
 </div>
 </section>
+<section id="challenge-2---propose-new-stats-visualisation" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-2---propose-new-stats-visualisation">Challenge 2 - Propose new stats visualisation</h2>
+<p>This one is for those who feel creative!</p>
+<p>Propose visualizations for datasets statistics presented on the landing page. You can also use other statistics than those displayed now.</p>
+<p>And a bonus question: <em>Which statistics would you like to have available via <code>djehuty</code> API call?</em></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Where to start?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Where to start?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Start by creating the dummy data. Upload some files and publish them.</p>
+<p>Then explore how the present statistics is created in:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>src/djehuty/web/resources/html_templates/portal.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Look how the data is retrieved using the procedure: <code>repository_statistics</code> in the <code>djehuty/src/djehuty/web/database.py</code>. Inspect the SPARQL templates used and adapt the queries to get the statistics you need.</p>
+<p>Once you have the data, start visualising!</p>
+</div>
+</div>
+</section>
 <section id="challenge-2---githubgitlab-release-integration" class="level2">
 <h2 class="anchored" data-anchor-id="challenge-2---githubgitlab-release-integration">Challenge 2 - GitHub/Gitlab Release integration</h2>
-<p>This one might sound familiar! The challenge is based on an <a href="https://github.com/4TUResearchData/djehuty/issues/20">issue</a> raised after last meeting between the DCC and 4TU.ResearchData technical team.</p>
+<p>This one might sound familiar!</p>
+<p>The challenge is based on an <a href="https://github.com/4TUResearchData/djehuty/issues/20">issue</a> raised after last meeting between the DCC and 4TU.ResearchData technical team.</p>
 <p>Work on an automated workflow to connect code hosting platform (GitHub/GitLab/BitBucket/Savannah/Forgejo) releases with 4TU.ResearchData.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Where to start?">
 <div class="callout-header d-flex align-content-center">
@@ -3152,13 +3180,18 @@ Where to start?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>foo</p>
+<p>There is already some good discussion in the <a href="https://github.com/4TUResearchData/djehuty/issues/20">issue</a>, so that can be a starting point.</p>
+<p>Explore the GitHub documentation and find out how webhooks can be used to achieve our goal.</p>
+<!-- - What does Github communicate to 4TU with a webhook? -->
+<!-- - Is that sufficient information for the integration? -->
 </div>
 </div>
 </section>
 <section id="challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" class="level2">
 <h2 class="anchored" data-anchor-id="challenge-3---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 3 - (Advanced) Git big repo results in big memory consumption</h2>
 <p>This one was <em>bugging</em> us for a while.</p>
+<p>When you git clone (relatively) big files from 4TU.ResearchData, <code>djehuty</code> process memory usage exceeds 4GB which can cause a system crash.</p>
+<p>You can help us solve this puzzle.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Where to start?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3169,7 +3202,7 @@ Where to start?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>foo</p>
+<p>The process that is causing the issue is probably <code>subprocess.run</code> in <code>__git_passthrough</code> procedure. You will find it in <code>src/djehuty/web/wsgi.py</code>.</p>
 </div>
 </div>
 </section>
