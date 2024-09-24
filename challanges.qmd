@@ -1,6 +1,6 @@
 ---
 title: "4TU.ResearchData Hackathon"
-subtitle: "Challanges"
+subtitle: "Challenges"
 format: 
   html:
     theme: cosmo
@@ -12,8 +12,10 @@ format:
     toc-depth: 2
     other-links:
       - text: Djehuty Documentation
-        icon: document
         href: https://djehuty.4tu.nl/
+      - text: Hackathon installation guides
+        href: https://hackathon.data.4tu.nl/
+        
     code-links:
       - text: GitHub Repo
         icon: github
@@ -29,7 +31,7 @@ Contribute to the [`djehuty` documentation](https://djehuty.4tu.nl/) by adding i
 In this challenge you will expand [Section 5](https://djehuty.4tu.nl/#x1-430005) of the documentation. This section already provides information about some of the endpoints, but it is still under construction. 
 
 :::{.callout-note title="Where to start?"}
-In the `djehuty-24.8` folder, find file 
+In the `djehuty` folder, find file 
 
 ```{default}
 src/djehuty/web/wsgi.py
@@ -76,7 +78,7 @@ Once you have the data, start visualising!
 :::
 
 
-## Challenge 2 - GitHub/Gitlab Release integration
+## Challenge 3 - GitHub/Gitlab Release integration
 
 This one might sound familiar! 
 
@@ -100,7 +102,7 @@ Explore the GitHub documentation and find out how webhooks can be used to achiev
 :::
 
 
-## Challenge 3 - (Advanced) Git big repo results in big memory consumption
+## Challenge 4 - (Advanced) Git big repo results in big memory consumption
 
 This one was *bugging* us for a while. 
 

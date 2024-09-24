@@ -3086,17 +3086,17 @@ vertical-align: -.125em;
   <ul class="collapse">
   <li><a href="#challenge-1---api-documentation" id="toc-challenge-1---api-documentation" class="nav-link active" data-scroll-target="#challenge-1---api-documentation">Challenge 1 - API Documentation</a></li>
   <li><a href="#challenge-2---propose-new-stats-visualisation" id="toc-challenge-2---propose-new-stats-visualisation" class="nav-link" data-scroll-target="#challenge-2---propose-new-stats-visualisation">Challenge 2 - Propose new stats visualisation</a></li>
-  <li><a href="#challenge-2---githubgitlab-release-integration" id="toc-challenge-2---githubgitlab-release-integration" class="nav-link" data-scroll-target="#challenge-2---githubgitlab-release-integration">Challenge 2 - GitHub/Gitlab Release integration</a></li>
-  <li><a href="#challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" id="toc-challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" class="nav-link" data-scroll-target="#challenge-3---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 3 - (Advanced) Git big repo results in big memory consumption</a></li>
+  <li><a href="#challenge-3---githubgitlab-release-integration" id="toc-challenge-3---githubgitlab-release-integration" class="nav-link" data-scroll-target="#challenge-3---githubgitlab-release-integration">Challenge 3 - GitHub/Gitlab Release integration</a></li>
+  <li><a href="#challenge-4---advanced-git-big-repo-results-in-big-memory-consumption" id="toc-challenge-4---advanced-git-big-repo-results-in-big-memory-consumption" class="nav-link" data-scroll-target="#challenge-4---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 4 - (Advanced) Git big repo results in big memory consumption</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://djehuty.4tu.nl/"><i class="bi bi-document"></i>Djehuty Documentation</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/4TUResearchData/djehuty/"><i class="bi bi-github"></i>GitHub Repo</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://djehuty.4tu.nl/"><i class="bi bi-link-45deg"></i>Djehuty Documentation</a></li><li><a href="https://hackathon.data.4tu.nl/"><i class="bi bi-link-45deg"></i>Hackathon installation guides</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/4TUResearchData/djehuty/"><i class="bi bi-github"></i>GitHub Repo</a></li></ul></div></nav>
 </div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">4TU.ResearchData Hackathon</h1>
-<p class="subtitle lead">Challanges</p>
+<p class="subtitle lead">Challenges</p>
 </div>
 
 
@@ -3128,7 +3128,7 @@ Where to start?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In the <code>djehuty-24.8</code> folder, find file</p>
+<p>In the <code>djehuty</code> folder, find file</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>src/djehuty/web/wsgi.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -3165,8 +3165,8 @@ Where to start?
 </div>
 </div>
 </section>
-<section id="challenge-2---githubgitlab-release-integration" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-2---githubgitlab-release-integration">Challenge 2 - GitHub/Gitlab Release integration</h2>
+<section id="challenge-3---githubgitlab-release-integration" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-3---githubgitlab-release-integration">Challenge 3 - GitHub/Gitlab Release integration</h2>
 <p>This one might sound familiar!</p>
 <p>The challenge is based on an <a href="https://github.com/4TUResearchData/djehuty/issues/20">issue</a> raised after last meeting between the DCC and 4TU.ResearchData technical team.</p>
 <p>Work on an automated workflow to connect code hosting platform (GitHub/GitLab/BitBucket/Savannah/Forgejo) releases with 4TU.ResearchData.</p>
@@ -3187,8 +3187,8 @@ Where to start?
 </div>
 </div>
 </section>
-<section id="challenge-3---advanced-git-big-repo-results-in-big-memory-consumption" class="level2">
-<h2 class="anchored" data-anchor-id="challenge-3---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 3 - (Advanced) Git big repo results in big memory consumption</h2>
+<section id="challenge-4---advanced-git-big-repo-results-in-big-memory-consumption" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-4---advanced-git-big-repo-results-in-big-memory-consumption">Challenge 4 - (Advanced) Git big repo results in big memory consumption</h2>
 <p>This one was <em>bugging</em> us for a while.</p>
 <p>When you git clone (relatively) big files from 4TU.ResearchData, <code>djehuty</code> process memory usage exceeds 4GB which can cause a system crash.</p>
 <p>You can help us solve this puzzle.</p>

@@ -14,6 +14,8 @@ format:
       - text: Djehuty Documentation
         icon: document
         href: https://djehuty.4tu.nl/
+      - text: Hackathon challenges
+        href: https://hackathon.data.4tu.nl/challenges.html
     code-links:
       - text: GitHub Repo
         icon: github
@@ -25,26 +27,28 @@ On Thursday, 26th September 2024, DCC together with 4TU.ResearchData are organis
 
 ## Get `djehuty` source code
 
-Get the latest release of `djehuty` from [Github Releases](https://github.com/4TUResearchData/djehuty/releases) page and pack it to a desired directory.
+`git clone` the [`djehuty`](https://github.com/4TUResearchData/djehuty) source code. 
 
-Alternatively, you can download tarball directly from command-line: 
+<!-- Get the latest release of `djehuty` from [Github Releases](https://github.com/4TUResearchData/djehuty/releases) page and pack it to a desired directory. -->
 
-```{r}
-#| eval: false
+<!-- Alternatively, you can download tarball directly from command-line:  -->
 
-curl -LO https://github.com/4TUResearchData/djehuty/archive/refs/tags/v24.8.tar.gz
-```
+<!-- ```{r} -->
+<!-- #| eval: false -->
 
-and unpack it using: 
+<!-- curl -LO https://github.com/4TUResearchData/djehuty/archive/refs/tags/v24.8.tar.gz -->
+<!-- ``` -->
+
+<!-- and unpack it using:  -->
+
+<!-- ```{default} -->
+<!-- tar zxvf v24.8.tar.gz -->
+<!-- ``` -->
+
+You should now be able to access the source code in the `djehuty` folder.
 
 ```{default}
-tar zxvf v24.8.tar.gz
-```
-
-You should now be able to access the source code in the `djehuty-24.8` folder.
-
-```{default}
-cd djehuty-24.8
+cd djehuty
 ```
 
 
